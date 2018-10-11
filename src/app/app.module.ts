@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NavegacionComponent } from './components/navegacion/navegacion.component';
+import { NenuComponent } from './components/nenu/nenu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavegacionComponent
+    NavegacionComponent,
+    NenuComponent
   ],
   imports: [
     BrowserModule
