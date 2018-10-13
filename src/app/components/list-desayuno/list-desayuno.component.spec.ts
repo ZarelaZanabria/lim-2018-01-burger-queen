@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NenuComponent } from './nenu.component';
+import { ListDesayunoComponent } from './list-desayuno.component';
 
-describe('NenuComponent', () => {
-  let component: NenuComponent;
-  let fixture: ComponentFixture<NenuComponent>;
+describe('ListDesayunoComponent', () => {
+  let component: ListDesayunoComponent;
+  let fixture: ComponentFixture<ListDesayunoComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NenuComponent ]
+      declarations: [ ListDesayunoComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NenuComponent);
+    fixture = TestBed.createComponent(ListDesayunoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
