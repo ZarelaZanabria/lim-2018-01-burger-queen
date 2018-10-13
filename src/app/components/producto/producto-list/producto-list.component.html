@@ -1,0 +1,6 @@
+<p>Hola</p>
+<ul class="text" *ngFor="let producto of productos | async">
+  <li >{{producto.categoria}}</li>
+  <li >{{producto.descripcion}}</li>
+  <li >{{producto.precio}}</li>
+ </ul>
