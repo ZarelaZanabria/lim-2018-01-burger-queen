@@ -30,7 +30,7 @@
           <div class="card-body">
             <h5 class="card-title">{{producto.categoria}}</h5>
             <p class="card-text">{{producto.descripcion}}</p>
-            <a href="#" class="btn btn-success">S/{{producto.precio}}</a>
+            <a href="#" (click)="addProducto(producto)" class="btn btn-success">S/{{producto.precio}}</a>
           </div>
         </div>
       </div>
@@ -40,16 +40,47 @@
   </div>
   <div class="col-md-4">
     <h1>Hola Pediddo</h1>
-    <div>
-      <h1>CART-SHOW</h1>
-      <ul class="list-group">
-        <li class="list-group-item">
-          <h4> <span style="color:blue"> </span>
-          </h4>
-          <input class="btn btn-danger" type="button" ng-click="removeItemCart(c)" value="Remove" />
-        </li>
-      </ul>
 
+    <div>
+      <span class="title margin-botton-10"> Carrito
+        <span class="subtitle">({{carrito.length}}) producto(s)</span>
+      </span>
     </div>
+
+    <div *ngIf="carrito.length>0;else carritovaciotmpl">
+      <table class="margin-top-20">
+        <thead>
+          <tr>
+            <td style="width:20%">Ctdad.</td>
+            <td>Producto</td>
+            <td>Precio</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of carrito">
+            <td class="has-text-centered">
+              <span>1</span>
+            </td>
+            <td>{{item.descripcion}}</td>
+            <td>{{item.precio}}€</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr class="carrito-total">
+            <td colspan="2"></td>
+            <td>
+              Total: {{total}}€
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <ng-template #carritovaciotmpl>
+      <div class="margin-top-20">
+        <strong>El carrito esta vacío.</strong>
+      </div>
+    </ng-template>
+
   </div>
 </div>
