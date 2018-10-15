@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./producto-list.component.css']
 })
 export class ProductoListComponent implements OnInit {
+  
   productos: Observable<any[]>;
   constructor(db: AngularFirestore) {
     //Esta varinale utiliza 

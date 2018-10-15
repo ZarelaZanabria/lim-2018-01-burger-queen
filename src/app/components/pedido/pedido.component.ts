@@ -2,13 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable, BehaviorSubject, combineLatest } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+import { Producto } from '../../model/producto';
 
 
-export interface Producto {
-  categoria: string;
-  descripcion: string;
-  precio: number;
-}
 
 @Component({
   selector: 'app-pedido',
