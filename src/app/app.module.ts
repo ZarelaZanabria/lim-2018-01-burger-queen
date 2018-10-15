@@ -22,6 +22,7 @@ import { ConexionService } from '../app/services/conexion.service';
 import { ProductoAddComponent } from './components/Producto/producto-add/producto-add.component';
 import { ProductoListComponent } from './components/Producto/producto-list/producto-list.component';
 import { ProductoComponent } from './components/producto/producto.component';
+import { PedidoComponent } from './components/pedido/pedido.component';
 
 //Realizar las rutas
 
@@ -29,7 +30,8 @@ const routes: Routes = [
     //Ponemos la ruta platos cuando llamamos al componete 
      { path: 'desayunos', component: ListDesayunoComponent },
     { path: 'productos', component: ProductoComponent },
-    //Cuando no tiene ninguna ruta que tiene que mostrar
+    { path: 'pedido', component: PedidoComponent },
+    //Cuando no tiene ninguna  ruta que tiene que mostrar
     { path: '', component: InicioComponent, pathMatch: 'full' },
     //Cuando asignamos cualquier ruta tiene que mostrar 
     { path: '**', redirectTo: 'inicio', pathMatch: 'full' },
@@ -45,6 +47,7 @@ const routes: Routes = [
         ProductoAddComponent,
         ProductoListComponent,
         ProductoComponent,
+        PedidoComponent,
 
     ],
     imports: [

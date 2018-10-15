@@ -1,6 +1,15 @@
-<p>Hola</p>
-<ul class="text" *ngFor="let producto of productos | async">
-  <li >{{producto.categoria}}</li>
-  <li >{{producto.descripcion}}</li>
-  <li >{{producto.precio}}</li>
- </ul>
+<div class="row ">
+  <div class="col-sm-2 " *ngFor="let producto of productos | async">
+    <div class="card">
+      <img class="card-img-top" src="http://subirimagen.me/uploads/20181011035539.jpg" alt="Card image cap">
+      <div class="card-body text-center">
+        <h6 class="card-title">{{producto.categoria}}</h6>
+        <p class="card-text">{{producto.descripcion}}</p>
+        <p class="card-text">S/{{producto.precio}}</p>
+        <a href="#" class="btn btn-success ">Agregar</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-8">
+  </div>
+</div>
