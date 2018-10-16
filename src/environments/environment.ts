@@ -12,7 +12,7 @@ export const environment = {
     storageBucket: "burgerqueen-43fcd.appspot.com",
     messagingSenderId: "927023129304"
   }
-  
+
 };
 
 /*

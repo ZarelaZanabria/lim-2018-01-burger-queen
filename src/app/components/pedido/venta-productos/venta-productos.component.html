@@ -1,0 +1,47 @@
+<h1>Hola Pediddo</h1>
+
+<div>
+  <span class="title margin-botton-10"> Carrito
+    <span class="subtitle">({{carrito.length}}) producto(s)</span>
+  </span>
+</div>
+
+<div *ngIf="carrito.length>0;else carritovaciotmpl">
+  <table class="table table-striped">
+    <caption>Carrito</caption>
+    <thead>
+      <tr>
+        <th class="span1">Id</th>
+        <th class="span5">Producto</th>
+        <th class="span2">Cantidad</th>
+        <th class="span2">Precio</th>
+        <th class="span2">Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="well" *ngFor="let item of carrito">
+        <td>{{item.Id}}</td>
+        <td>{{item.categoria}} {{item.descripcion}}</td>
+        <td>
+          <input type="text" ng-model="item.Cantidad" />
+        </td>
+        <td>S/. {{item.precio}}</td>
+        <td>S/. {{item.Cantidad * item.precio}}</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr class="carrito-total">
+        <td colspan="2"></td>
+        <td>
+          Total: {{total}}€
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+<ng-template #carritovaciotmpl>
+  <div class="margin-top-20">
+    <strong>El carrito esta vacío.</strong>
+  </div>
+</ng-template>

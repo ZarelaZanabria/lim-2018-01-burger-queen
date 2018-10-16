@@ -7,7 +7,6 @@ import { RouterModule, Routes } from '@angular/router'
 
 import { AppComponent } from './app.component';
 import { NavegacionComponent } from './components/navegacion/navegacion.component';
-import { ListDesayunoComponent } from './components/list-desayuno/list-desayuno.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { environment } from '../environments/environment';
 
@@ -23,12 +22,12 @@ import { ProductoAddComponent } from './components/Producto/producto-add/product
 import { ProductoListComponent } from './components/Producto/producto-list/producto-list.component';
 import { ProductoComponent } from './components/producto/producto.component';
 import { PedidoComponent } from './components/pedido/pedido.component';
+import { CatalagoProductosComponent } from './components/pedido/catalago-productos/catalago-productos.component';
+import { VentaProductosComponent } from './components/pedido/venta-productos/venta-productos.component';
 
 //Realizar las rutas
 
 const routes: Routes = [
-    //Ponemos la ruta platos cuando llamamos al componete 
-     { path: 'desayunos', component: ListDesayunoComponent },
     { path: 'productos', component: ProductoComponent },
     { path: 'pedido', component: PedidoComponent },
     //Cuando no tiene ninguna  ruta que tiene que mostrar
@@ -42,12 +41,13 @@ const routes: Routes = [
     declarations: [
         AppComponent,
         NavegacionComponent,
-        ListDesayunoComponent,
         InicioComponent,
         ProductoAddComponent,
         ProductoListComponent,
         ProductoComponent,
         PedidoComponent,
+        CatalagoProductosComponent,
+        VentaProductosComponent,
 
     ],
     imports: [
@@ -68,3 +68,5 @@ const routes: Routes = [
         { provide: APP_BASE_HREF, useValue: '/' }]
 })
 export class AppModule { }
+
+
