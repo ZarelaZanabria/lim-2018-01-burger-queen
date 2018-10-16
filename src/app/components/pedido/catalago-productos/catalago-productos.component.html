@@ -13,6 +13,10 @@
         aria-selected="false" (click)="filterByCategoria('Bebida')">Bebidas</a>
     </li>
     <li class="nav-item">
+      <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile"
+        aria-selected="false" (click)="filterByCategoria('Acompañamientos')">Acompañamientos</a>
+    </li>
+    <li class="nav-item">
       <a class="nav-link" id="pills-profile-tab" href="#pills-profile" aria-selected="false" role="tab"
         aria-controls="pills-profile" (click)="filterByCategoria(null)" *ngIf="this.categoriaFilter$.getValue()">
         Limpiar Filtro
