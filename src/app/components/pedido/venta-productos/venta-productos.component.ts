@@ -9,10 +9,10 @@ import { Subscription } from 'rxjs';
 })
 export class VentaProductosComponent implements OnInit {
 //CARRITO
-private carrito: Array<Producto> = [];
-private subscription: Subscription;
-private total: number;
-private qty : number
+public carrito: Array<Producto> = [];
+public subscription: Subscription;
+public total: number;
+
   constructor(private pedidoService: PedidoService) { }
 
   

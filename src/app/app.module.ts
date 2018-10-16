@@ -18,12 +18,13 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 
 //Lamamos al servicio  
 import { ConexionService } from '../app/services/conexion.service';
-import { ProductoAddComponent } from './components/Producto/producto-add/producto-add.component';
-import { ProductoListComponent } from './components/Producto/producto-list/producto-list.component';
+import { ProductoAddComponent} from '../app/components/producto/producto-add/producto-add.component';
+import {ProductoListComponent} from '../app/components/producto/producto-list/producto-list.component'
 import { ProductoComponent } from './components/producto/producto.component';
 import { PedidoComponent } from './components/pedido/pedido.component';
 import { CatalagoProductosComponent } from './components/pedido/catalago-productos/catalago-productos.component';
 import { VentaProductosComponent } from './components/pedido/venta-productos/venta-productos.component';
+import { from } from 'rxjs';
 
 //Realizar las rutas
 
@@ -48,6 +49,7 @@ const routes: Routes = [
         PedidoComponent,
         CatalagoProductosComponent,
         VentaProductosComponent,
+    
 
     ],
     imports: [
@@ -61,6 +63,7 @@ const routes: Routes = [
         AngularFireStorageModule // imports firebase/storage only needed for storage features
 
     ],
+
     bootstrap: [AppComponent],
     exports: [RouterModule],
     //Agregamos el servicio dentro providers
