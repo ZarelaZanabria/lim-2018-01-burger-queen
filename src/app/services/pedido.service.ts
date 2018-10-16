@@ -31,10 +31,15 @@ export class PedidoService {
    * @param producto
    */
   addCarrito(carrito: Producto) {
-   this.subject.next([...this.itemsCarrito, carrito]); 
-    console.log(this.itemsCarrito)  
-   console.log() 
 
+   this.subject.next([...this.itemsCarrito, carrito]); 
+  /*  if (condition) {
+     
+   } else {
+     
+   } */
+
+  //Esto me sirve para guardar un pedido en la lista de datos 
    return this.firestore.collection('pedido').add(carrito)
     
   }
