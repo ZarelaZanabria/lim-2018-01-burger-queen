@@ -67,8 +67,8 @@ const routes: Routes = [
     bootstrap: [AppComponent],
     exports: [RouterModule],
     //Agregamos el servicio dentro providers
-    providers: [ConexionService,
-        { provide: APP_BASE_HREF, useValue: '/' }]
+    providers: [ConexionService/* ,
+        { provide: APP_BASE_HREF, useValue: '/' } */]
 })
 export class AppModule { }
 
