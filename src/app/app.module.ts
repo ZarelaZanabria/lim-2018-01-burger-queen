@@ -68,7 +68,7 @@ const routes: Routes = [
     exports: [RouterModule],
     //Agregamos el servicio dentro providers
     providers: [ConexionService,
-        { provide: APP_BASE_HREF, useValue: '/lim-2018-01-burger-queen/' }]
+        { provide: APP_BASE_HREF, useValue: '/' }]
 })
 export class AppModule { }
 
