@@ -32,7 +32,7 @@ const routes: Routes = [
     { path: 'productos', component: ProductoComponent },
     { path: 'pedido', component: PedidoComponent },
     //Cuando no tiene ninguna  ruta que tiene que mostrar
-    { path: '', component: InicioComponent, pathMatch: 'full' },
+    { path: 'inicio', component: InicioComponent },
     //Cuando asignamos cualquier ruta tiene que mostrar 
     { path: '**', redirectTo: 'inicio', pathMatch: 'full' }, 
 ]
