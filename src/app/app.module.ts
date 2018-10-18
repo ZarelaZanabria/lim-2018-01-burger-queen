@@ -30,11 +30,11 @@ import { from } from 'rxjs';
 
 const routes: Routes = [
     { path: '/lim-2018-01-burger-queen/productos', component: ProductoComponent },
-    { path: 'lim-2018-01-burger-queen/pedido', component: PedidoComponent },
+    { path: '/lim-2018-01-burger-queen/pedido', component: PedidoComponent },
     //Cuando no tiene ninguna  ruta que tiene que mostrar
-    { path: 'lim-2018-01-burger-queen/inicio', component: InicioComponent },
+    { path: '/lim-2018-01-burger-queen/inicio', component: InicioComponent },
     //Cuando asignamos cualquier ruta tiene que mostrar 
-    { path: 'lim-2018-01-burger-queen/**', redirectTo: 'inicio', pathMatch: 'full' }, 
+    { path: '/lim-2018-01-burger-queen/**', redirectTo: 'inicio', pathMatch: 'full' }, 
 ]
 
 
