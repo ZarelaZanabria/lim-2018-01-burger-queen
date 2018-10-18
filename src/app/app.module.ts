@@ -33,8 +33,8 @@ const routes: Routes = [
     { path: 'pedido', component: PedidoComponent },
     //Cuando no tiene ninguna  ruta que tiene que mostrar
     { path: '', component: InicioComponent, pathMatch: 'full' },
-   /*  //Cuando asignamos cualquier ruta tiene que mostrar 
-    { path: '**', redirectTo: 'inicio', pathMatch: 'full' }, */
+    //Cuando asignamos cualquier ruta tiene que mostrar 
+    { path: '**', redirectTo: 'inicio', pathMatch: 'full' }, 
 ]
 
 
