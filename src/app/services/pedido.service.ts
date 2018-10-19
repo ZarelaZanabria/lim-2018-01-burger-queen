@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { Producto } from '../model/producto';
 import { AngularFirestoreCollection, AngularFirestore } from '@angular/fire/firestore';
-;
 
 
 @Injectable({
