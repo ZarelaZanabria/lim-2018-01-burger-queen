@@ -2,7 +2,7 @@
 
   <div class="form-group col-md-8">
     <label for="formGroupExampleInput">Nombre del Cliente</label>
-    <input type="text" class="form-control" id="inputName" [(ngModel)] ="name" placeholder="Cliente">
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Cliente">
   </div>
 </div>
 <span class="title margin-botton-10"> Pedido
@@ -30,20 +30,19 @@
         </td>
         <td>S/. {{item.precio}}</td>
         <td>S/. {{item.precio}}</td>
-        <td><button class="fa fa-trash-alt" (click)="deleteTodo(carrito)" ></button></td>
+        <td><button class="fa fa-trash-alt"></button></td>
       </tr>
     </tbody>
     <tfoot>
       <tr class="carrito-total">
         <td colspan="2"></td>
         <td>
-          Total: S/. {{total}}
+          Total: S/. {{total}} 
         </td>
       </tr>
     </tfoot>
   </table>
 </div>
-<button type="button" class="btn btn-success" (click)="guardarPedido(name)">Guardar </button>
 
 <ng-template #carritovaciotmpl>
   <div class="margin-top-20">
