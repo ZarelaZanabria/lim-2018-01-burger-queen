@@ -20,6 +20,7 @@ import { PedidoComponent } from './components/pedido/pedido.component';
 import { CatalagoProductosComponent } from './components/pedido/catalago-productos/catalago-productos.component';
 import { VentaProductosComponent } from './components/pedido/venta-productos/venta-productos.component';
 import { from } from 'rxjs';
+import { ConexionService } from './services/conexion.service';
 
 //Realizar las rutas
 

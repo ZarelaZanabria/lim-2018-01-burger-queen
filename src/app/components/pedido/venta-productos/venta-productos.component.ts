@@ -12,6 +12,9 @@ export class VentaProductosComponent implements OnInit {
 public carrito: Array<Producto> = [];
 public subscription: Subscription;
 public total: number;
+name : string
+nombre ; 
+
 
   constructor(private pedidoService: PedidoService) { }
 
@@ -23,7 +26,24 @@ public total: number;
     },
       error => alert(error));
   }
+
+guardarPedido(userName){
+    const data = {
+      order: this.carrito,
+      username: name,
+      amount: this.total
+    };
+    if (userName) {
+      this.pedidoService.save(data);
+    }
+
+  } 
+
+  deleteTodo(indice){     
+    const index = this.carrito.indexOf(indice) ;
+    this.carrito.splice(index,1)
+   }
+
+    /* this.nombre = document.getElementById('inputName'); */
  
-
-
 }
