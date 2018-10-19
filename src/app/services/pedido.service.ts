@@ -24,51 +24,22 @@ export class PedidoService {
   
   }
 
-
-
-  /**
-   * addCarrito
-   * @param producto
-   */
   addCarrito(carrito: Producto) {
 
    this.subject.next([...this.itemsCarrito, carrito]); 
-  /*  if (condition) {
-     
-   } else {
-     
-   } */
-
-  //Esto me sirve para guardar un pedido en la lista de datos 
-   return this.firestore.collection('pedido').add(carrito)
-    
+   
   }
 
-  /**
-   * clearCarrito
-   */
-  clearCarrito() {
-    this.subject.next(null);
-  }
-
-  /**
-   * getCarrito
-   */
   getCarrito(): Observable<Producto[]> {
     return this.subject;
   }
 
-  /**
-   * getTotal
-   */
+ 
   getTotal() {
     return this.itemsCarrito.reduce((total, producto: Producto) => { return total + producto.precio; }, 0);
   }
 
-  deletePedido($key: string) {
-    /*   this.itemsCarrito.remove($key); */
-
-  }
+ 
 
 
 
