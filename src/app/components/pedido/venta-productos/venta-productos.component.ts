@@ -32,13 +32,20 @@ export class VentaProductosComponent implements OnInit {
       };
       if (userName) {
         this.pedidoService.save(data);
+        window.location.reload()
+       
+      alert('Pedido guardado correctamente');
+      } else {
+        alert('Realice un pedido e inserte su nombre');
       }
   
     } 
-  
+
     deleteTodo(indice){     
       const index = this.carrito.indexOf(indice) ;
       this.carrito.splice(index,1)
      }
+
+     
     
   }

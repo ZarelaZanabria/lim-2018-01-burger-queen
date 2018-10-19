@@ -1,5 +1,4 @@
-<div>
-
+<div >
   <div class="form-group col-md-8">
     <label for="formGroupExampleInput">Nombre del Cliente</label>
     <input type="text" class="form-control"  [(ngModel)]="name" placeholder="Cliente">
@@ -13,22 +12,14 @@
     <caption>Pedido </caption>
     <thead class="thead-light">
       <tr>
-        <th class="col">Id</th>
         <th class="col">Producto</th>
-        <th class="col">Cantidad</th>
         <th class="col">Precio</th>
-        <th class="col">Total</th>
         <th class="col">Opciones</th>
       </tr>
     </thead>
     <tbody>
       <tr class="well" *ngFor="let item of carrito">
-        <td>{{item.key}}</td>
         <td>{{item.categoria}} {{item.descripcion}}</td>
-        <td>
-          <input type="text" ng-model="item.Cantidad" size="7" />
-        </td>
-        <td>S/. {{item.precio}}</td>
         <td>S/. {{item.precio}}</td>
         <td><button class="fa fa-trash-alt" (click)="deleteTodo(carrito)" ></button></td>
       </tr>

@@ -11,7 +11,7 @@ export class PedidoService {
   //Es un array de  Objectos de productos
   public itemsCarrito: Producto[] = [];
   navbarCartCount = 0;
-  db: any;
+
 
   constructor(private firestore: AngularFirestore) {
     this.subject.subscribe(data => this.itemsCarrito = data);
