@@ -8,22 +8,37 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./venta-productos.component.css']
 })
 export class VentaProductosComponent implements OnInit {
-//CARRITO
-public carrito: Array<Producto> = [];
-public subscription: Subscription;
-public total: number;
-
-  constructor(private pedidoService: PedidoService) { }
-
-  
-  ngOnInit() {
-    this.pedidoService.getCarrito().subscribe(data => {
-      this.carrito = data;
-      this.total = this.pedidoService.getTotal();
-    },
-      error => alert(error));
-  }
+  //CARRITO
+  public carrito: Array<Producto> = [];
+  public subscription: Subscription;
+  public total: number;
+  name : string
  
-
-
-}
+    constructor(private pedidoService: PedidoService) { }
+    
+    ngOnInit() {
+      this.pedidoService.getCarrito().subscribe(data => {
+        this.carrito = data;
+        this.total = this.pedidoService.getTotal();
+      },
+        error => alert(error));
+    }
+  
+  guardarPedido(userName){
+      const data = {
+        order: this.carrito,
+        username: this.name,
+        amount: this.total
+      };
+      if (userName) {
+        this.pedidoService.save(data);
+      }
+  
+    } 
+  
+    deleteTodo(indice){     
+      const index = this.carrito.indexOf(indice) ;
+      this.carrito.splice(index,1)
+     }
+    
+  }
