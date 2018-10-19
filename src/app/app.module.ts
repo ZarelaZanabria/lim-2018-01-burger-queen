@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { APP_BASE_HREF } from '@angular/common';
+import {FormsModule} from '@angular/forms';
 
 //Importamos el archivo de router para poder realizar las rutas
 import { RouterModule, Routes } from '@angular/router'
@@ -60,15 +60,14 @@ const routes: Routes = [
         AngularFireModule.initializeApp(environment.firebase),
         AngularFirestoreModule, // imports firebase/firestore, only needed for database features
         AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
-        AngularFireStorageModule // imports firebase/storage only needed for storage features
-
+        AngularFireStorageModule, // imports firebase/storage only needed for storage features
+        FormsModule
     ],
 
     bootstrap: [AppComponent],
     exports: [RouterModule],
     //Agregamos el servicio dentro providers
-    providers: [ConexionService/* ,
-        { provide: APP_BASE_HREF, useValue: '/' } */]
+    providers: [ConexionService]
 })
 export class AppModule { }
 
