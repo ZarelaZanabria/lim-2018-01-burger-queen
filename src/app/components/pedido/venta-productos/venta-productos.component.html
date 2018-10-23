@@ -4,8 +4,7 @@
 </div>
 
 <span class="title margin-botton-10"> Pedido
-  <span class="subtitle">({{carrito.length}}) producto(s)</span>
-  
+  <span class="subtitle">({{carrito.length}}) producto(s)</span>  
 </span>
 <div *ngIf="carrito.length>0;else carritovaciotmpl">
   <table class="table">
@@ -26,15 +25,16 @@
     </tbody>
     <tfoot>
       <tr class="carrito-total">
-        <td colspan="2"></td>
+        <td colspan="1"></td>
         <td>
-          Total: S/. {{total}} 
+          <strong>Total: S/. {{total}} </strong>
+         
         </td>
       </tr>
     </tfoot>
   </table>
 </div>
-<button type="button" class="btn btn-success" (click)="guardarPedido(name)" >Guardar </button>
+<button type="button" class="btn btn-success" (click)="guardarPedido(name)" >Guardar <i class="fas fa-save"></i></button>
 
 <ng-template #carritovaciotmpl>
   <div class="margin-top-20">
