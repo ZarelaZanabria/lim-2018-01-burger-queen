@@ -18,7 +18,7 @@
 <div class="row" *ngIf="productos$ | async; let productos; else loading">
   <div class="col-sm-6" *ngFor="let producto of productos">
     <div class="card">
-      <img class="card-img-top" src="{{producto.url}}" width="30px" height="120px">
+      <img class="card-img-top" src="{{producto.url}}" width="30px" height="150px">
       <div class="card-body">
         <p class="card-text"><strong>{{producto.descripcion}}</strong></p>
         <a id="textPrecio" class="btn btn-success">S/{{producto.precio}}</a>
