@@ -1,26 +1,16 @@
-<div>
-  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+<div class="navLista">
+  <ul class="nav nav-pills mb-3" role="tablist">
     <li class="nav-item">
-      <a class="nav-link active" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home"
-        aria-selected="true" (click)="filterByCategoria('Hanburguesa')">Hamburguesa</a>
+      <a class="nav-link" data-toggle="pill" role="tab"  aria-selected="true" (click)="filterByCategoria('Hanburguesa')">Hamburguesa</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="pills-profile-tab" data-toggle="pill"  role="tab" aria-controls="pills-profile"
-        aria-selected="false" (click)="filterByCategoria('Desayuno')">Desayuno</a>
+      <a class="nav-link " role="tab"  aria-selected="true" (click)="filterByCategoria('Desayuno')">Desayuno</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="pills-profile-tab" data-toggle="pill"  role="tab" aria-controls="pills-profile"
-        aria-selected="false" (click)="filterByCategoria('Bebida')">Bebidas</a>
+      <a class="nav-link" data-toggle="pill" role="tab"  aria-selected="true" (click)="filterByCategoria('Bebida')">Bebidas</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="pills-profile-tab" data-toggle="pill"  role="tab" aria-controls="pills-profile"
-        aria-selected="false" (click)="filterByCategoria('Acompañamientos')">Acompañamientos</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" id="pills-profile-tab"  aria-selected="false" role="tab"
-        aria-controls="pills-profile" (click)="filterByCategoria(null)" *ngIf="this.categoriaFilter$.getValue()">
-        Limpiar Filtro
-      </a>
+      <a class="nav-link" data-toggle="pill" role="tab"  aria-selected="true" (click)="filterByCategoria('Acompañamientos')">Acompañamientos</a>
     </li>
   </ul>
 </div>
@@ -28,10 +18,15 @@
 <div class="row" *ngIf="productos$ | async; let productos; else loading">
   <div class="col-sm-6" *ngFor="let producto of productos">
     <div class="card">
-      <img class="card-img-top" src="{{producto.url}}" width="30" height="150">
+      <img class="card-img-top" src="{{producto.url}}" width="30px" height="120px">
       <div class="card-body">
         <p class="card-text"><strong>{{producto.descripcion}}</strong></p>
-        <a (click)="addProducto(producto)" class="btn btn-success">S/{{producto.precio}}</a>
+        <a id="textPrecio" class="btn btn-success">S/{{producto.precio}}</a>
+        <div class="text-right">
+          <button (click)="addProducto(producto)" type="button" class="btn  btn-warning btn-sm "> <i class="fas fa-shopping-cart"></i>
+            Agregar</button>
+        </div>
+
       </div>
     </div>
   </div>

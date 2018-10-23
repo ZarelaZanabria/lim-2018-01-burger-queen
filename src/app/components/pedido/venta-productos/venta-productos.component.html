@@ -1,11 +1,11 @@
-<div >
-  <div class="form-group col-md-8">
-    <label for="formGroupExampleInput">Nombre del Cliente</label>
-    <input type="text" class="form-control"  [(ngModel)]="name" placeholder="Cliente">
-  </div>
+<div class="form-group col-md-8">
+    <label for="formGroupExampleInput"><strong>Nombre del cliente :</strong> </label>
+    <input type="text" class="form-control"[(ngModel)]="name" placeholder="Cliente"/>
 </div>
+
 <span class="title margin-botton-10"> Pedido
   <span class="subtitle">({{carrito.length}}) producto(s)</span>
+  
 </span>
 <div *ngIf="carrito.length>0;else carritovaciotmpl">
   <table class="table">
@@ -21,7 +21,7 @@
       <tr class="well" *ngFor="let item of carrito">
         <td>{{item.categoria}} {{item.descripcion}}</td>
         <td>S/. {{item.precio}}</td>
-        <td><button class="fa fa-trash-alt" (click)="deleteTodo(carrito)" ></button></td>
+        <td><button (click)="deleteTodo(carrito)"  class="btn btn-danger"><i  class="fa fa-trash-alt"></i></button></td>
       </tr>
     </tbody>
     <tfoot>
@@ -34,7 +34,7 @@
     </tfoot>
   </table>
 </div>
-<button type="button" class="btn btn-success" (click)="guardarPedido(name)">Guardar </button>
+<button type="button" class="btn btn-success" (click)="guardarPedido(name)" >Guardar </button>
 
 <ng-template #carritovaciotmpl>
   <div class="margin-top-20">

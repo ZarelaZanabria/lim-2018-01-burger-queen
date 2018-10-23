@@ -1,3 +1,15 @@
 .card{
   margin: 10px;
 }
+
+.textPrecio{
+  color: #ffff;
+}
+
+.navLista{
+  color: #f8f9fa;
+  background: #108c15;
+}
+
+a:hover { background: #ffc107; 
+}
